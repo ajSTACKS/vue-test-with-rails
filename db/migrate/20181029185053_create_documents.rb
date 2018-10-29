@@ -3,7 +3,7 @@ class CreateDocuments < ActiveRecord::Migration[5.2]
     create_table :documents do |t|
       t.string :subject
       t.text :body
-      t.integer :state
+      t.integer :state, default: 0, null: false
 
       t.timestamps
     end
